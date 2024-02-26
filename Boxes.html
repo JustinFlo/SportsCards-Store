@@ -42,41 +42,609 @@
   </nav>
 <body> 
 
-    <div style="width: 100%; height: 100%; position: relative">
-        <div style="width: 1784px; height: 2192px; left: 0px; top: 92px; position: absolute; background: #00B0FC"></div>
-        <div style="width: 834px; height: 87px; left: 475px; top: 106px; position: absolute; color: white; font-size: 64px; font-family: Kranky; font-weight: 400; word-wrap: break-word">                 Boxes</div>
-        <img style="width: 414px; height: 315px; left: 22px; top: 1810px; position: absolute" src="pictures/Hobby-Leaf.jpg" />
-        <img style="width: 357px; height: 363px; left: 22px; top: 990px; position: absolute" src="pictures/Phoenix.jpg" />
-        <div style="width: 752.35px; height: 62px; left: 516px; top: 2081px; position: absolute">
-            <div style="width: 60px; height: 62px; left: 75.35px; top: 0px; position: absolute; background: black; border-radius: 9999px"></div>
-            <div style="width: 60px; height: 62px; left: 463.35px; top: 0px; position: absolute; background: black; border-radius: 9999px"></div>
-            <div style="width: 60px; height: 62px; left: 617.35px; top: 0px; position: absolute; background: black; border-radius: 9999px"></div>
-            <div style="width: 60px; height: 62px; left: 540.35px; top: 0px; position: absolute; background: black; border-radius: 9999px"></div>
-            <div style="width: 60px; height: 62px; left: 386.35px; top: 0px; position: absolute; background: black; border-radius: 9999px"></div>
-            <div style="width: 60px; height: 62px; left: 306.35px; top: 0px; position: absolute; background: black; border-radius: 9999px"></div>
-            <div style="width: 60px; height: 62px; left: 229.35px; top: 0px; position: absolute; background: black; border-radius: 9999px"></div>
-            <div style="width: 60px; height: 62px; left: 152.35px; top: 0px; position: absolute; background: black; border-radius: 9999px"></div>
-            <div style="width: 40px; height: 53px; left: 712.35px; top: 4px; position: absolute">
-                <div style="width: 48.39px; height: 0px; left: 0px; top: 0px; position: absolute; transform: rotate(34.24deg); transform-origin: 0 0; border: 1px black solid"></div>
-                <div style="width: 47.58px; height: 0px; left: 0px; top: 53px; position: absolute; transform: rotate(-32.79deg); transform-origin: 0 0; border: 1px black solid"></div>
-            </div>
-            <div style="width: 40px; height: 53px; left: 40px; top: 57.27px; position: absolute; transform: rotate(-179.23deg); transform-origin: 0 0">
-                <div style="width: 48.39px; height: 0px; left: 0px; top: 0px; position: absolute; transform: rotate(-144.99deg); transform-origin: 0 0; border: 1px black solid"></div>
-                <div style="width: 47.58px; height: 0px; left: 0.71px; top: -53px; position: absolute; transform: rotate(147.98deg); transform-origin: 0 0; border: 1px black solid"></div>
-            </div>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="theme-color" content="linear-gradient(to bottom, #61daff, #656bff)">
+     <meta name="description" content="We will simple add to cart using javascript localstorage">
+     <meta name="keywords" content="add to cart, add to cart javascript, localstorage add to cart, ecommerce shopping javascript, shooping cart demo">
+     <meta name="author" content="Rajamanickam">
+     <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="https://rajamanickam.vercel.app/favicon-rajamanickam.png">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+     <title>Simple Add to cart functionality using Javascript</title>
+  </head>
+  
+  <body>
+     <main>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+           <a class="navbar-brand" href="#"><strong>Shoping Cart</strong></a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+           </button>
+  
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                 <input class="form-control mr-sm-2" type="search" id="search_field"  placeholder="Search" aria-label="Search">
+              </form>
+              <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal"
+                 data-target="#staticBackdrop">
+                  <i class="fas fa-shopping-cart total-count"></i>
+              </button>
+           </div>
+        </nav>
+
+                    <div class="tab_content current active pt-45">
+                       
+                       <div class="tabs_item current">
+                          <div class="row justify-content-center">
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Absolute.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">2023 NFL Absolute  Hobby</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 1200 </h4>
+                                         <span>(4.9)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Oxford" data-price="1200" class="default-btn border-radius-5"> Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Bowman.png" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">2023 Bowman Chrome-Sapphire Edition Hobby </a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 459 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Tunic" data-price="459" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-BowmanChrome.png" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">2022 Bowman Chrome Hobby	</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 4059 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Huawei" data-price="4059" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Chronicles.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">2021 NFL Chronicles Hobby</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 800 </h4>
+                                         <span>(4.9)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Short-Sleeve" data-price="800" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Chronicles2.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">2023 NFL Chronicles Hobby</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 2459 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Culotte" data-price="2459" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-ChroniclesDP.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#"> 2022 Chronicles Draft Picks Hobby </a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 1999 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="FireBoltt" data-price="1999" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Classics.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Cuban Collar Shirt</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 499 </h4>
+                                         <span>(4.9)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="CubanCollar" data-price="499" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-CollegePrizm.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Babydoll</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 1159 </h4>
+                                         <span>(4.0)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Babydoll" data-price="1159" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-ContendersFOTL.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Google Pixel</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 2059 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Google" data-price="2059" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-ContendersOptic.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">T-shirt</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 700 </h4>
+                                         <span>(3.9)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="T-shirt" data-price="700" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Donruss.jpeg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Wrap around</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 4059 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Wrap" data-price="4059" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-DonrussClearly.png" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">titan Power</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 459 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="titan" data-price="459" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="tabs_item">
+                          <div class="row justify-content-center">
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-DonrussElite.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Oxford Shirts</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 1200 </h4>
+                                         <span>(4.9)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Oxford" data-price="1200" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Elements.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Short-Sleeve Shirt</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 800 </h4>
+                                         <span>(4.9)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Short-Sleeve" data-price="800" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Immaculate.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Cuban Collar Shirt</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 499 </h4>
+                                         <span>(4.9)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Cuban" data-price="499" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Leaf.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">T-shirt</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 700 </h4>
+                                         <span>(3.9)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="T-shirt" data-price="700" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="tabs_item">
+                          <div class="row justify-content-center">
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Legacy-2021.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Tunic </a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 459 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Tunic" data-price="459" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-MosiacDP.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Culotte dress</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 2459 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Culotte" data-price="2459" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-NationalTreasures.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Babydoll</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 1159 </h4>
+                                         <span>(4.0)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Babydoll" data-price="1159" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Phoenix.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Wrap around</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 4059 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Wrap" data-price="4059" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="tabs_item">
+                          <div class="row justify-content-center">
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Prizm-2023.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Huawei Watch Buds	</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 4059 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Huawei" data-price="4059" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Select.png" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Fire Boltt Dazzle </a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 1999 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="FireBoltt" data-price="1999" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-SelectDP.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">Google Pixel</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 2059 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="Google" data-price="2059" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-lg-3 col-md-6">
+                                <div class="featured-item">
+                                   <div class="featured-item-img">
+                                      <a href="#">
+                                         <img src="hobby/Hobby-Spectra.jpg" alt="Images">
+                                      </a>
+                                   </div>
+                                   <div class="content">
+                                      <h3><a href="#">titan Power</a></h3>
+                                      <hr>
+                                      <div class="content-in">
+                                         <h4>₹ 459 </h4>
+                                         <span>(4.4)<i class="fa fa-star"></i></span>
+                                      </div>
+                                      <hr>
+                                      <div class="featured-content-list">
+                                         <button type="button" data-name="titan" data-price="459" class="default-btn border-radius-5">Add to cart</button>
+                                      </div>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+  
+                       <p id="not_found"></p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+  
+  
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+           aria-labelledby="staticBackdropLabel" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                 <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Your Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+                 </div>
+                 <div class="modal-body">
+                    <table class="show-cart table">
+          
+                    </table>
+                    <div class="grand-total">Total price: ₹<span class="total-cart"></span></div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- <button type="button" class="btn btn-danger clear-all">Clear All</button> -->
+                  </div>
+              </div>
+           </div>
         </div>
-        <img style="width: 665px; height: 665px; left: 487px; top: 325px; position: absolute" src="pictures/Hobby-Bowman.png" />
-        <img style="width: 292px; height: 270px; left: 22px; top: 227px; position: absolute" src="pictures/Hobby-Bowman.png" />
-        <img style="width: 215px; height: 302px; left: 1193px; top: 325px; position: absolute" src="pictures/Name1.jpg" />
-        <img style="width: 216px; height: 301px; left: 1469px; top: 325px; position: absolute" src="pictures/Name2.jpg" />
-        <img style="width: 274px; height: 407px; left: 1193px; top: 706px; position: absolute" src="pictures/Name3.jpg" />
-        <img style="width: 276px; height: 399px; left: 1484px; top: 706px; position: absolute" src="pictures/Name4.jpg" />
-        <div style="width: 500px; height: 137px; left: 523px; top: 1051px; position: absolute; color: white; font-size: 64px; font-family: Kranky; font-weight: 400; word-wrap: break-word">2023 Bowman Sapphire Edition<br/></div>
-        <div style="width: 518px; height: 82px; left: 1193px; top: 208px; position: absolute; color: white; font-size: 64px; font-family: Kranky; font-weight: 400; word-wrap: break-word">Possible Hits:</div>
-        <div style="width: 1188px; height: 361px; left: 538px; top: 1267px; position: absolute"><span style="color: white; font-size: 48px; font-family: Kranky; font-weight: 400; word-wrap: break-word">Each Box contains One Autograph and Three Parallels!<br/><br/></span><span style="color: white; font-size: 36px; font-family: Kranky; font-weight: 400; word-wrap: break-word">"Experience the resurgence of Bowman Sapphire, making a triumphant return as the pinnacle chrome product of the year! Our latest release promises to be a collector's dream, elevating the thrill of unboxing to new heights. Unveil the excitement with not one, but two stunning new Sapphire Inserts that showcase the mesmerizing beauty of the game. Immerse yourself in the world of autograph parallels, where each box guarantees a new level of exclusivity with a precious autographed gem. Bowman Sapphire stands as a testament to the craftsmanship and innovation that defines the collecting experience. Don't miss your chance to be part of this exhilarating journey, as we bring you the most sought-after cards, meticulously designed to capture the essence of the sport and the joy of collecting. Indulge in the excitement, chase the brilliance, and let Bowman Sapphire become the crowning jewel in your cherished collection!"</span></div>
-        <img style="width: 292px; height: 325px; left: 22px; top: 585px; position: absolute" src="pictures/Hobby-Chronicles.jpg" />
-        <img style="width: 392px; height: 350px; left: 22px; top: 1443px; position: absolute" src="pictures/Hobby-Absolute.jpg"/>
-    </div>
+     </main>
+     <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="script.js"></script>
+  
+  
+  </body>
+  
+  </html>
     
 
     
